@@ -41,8 +41,4 @@ sudo systemctl restart smbd
 echo "Installing HPLIP..."
 sudo apt install -y hplip
 
-echo "Running automated hp-setup..."
-# Sends Enter, d, y, m, y, Enter, Enter, q in sequence using only \r
-printf "\r d y m y \r \r q\r" | sudo hp-setup -i
-
 echo "Setup complete! CUPS, Samba, and HPLIP are ready."
